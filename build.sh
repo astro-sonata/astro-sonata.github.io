@@ -3,6 +3,9 @@ set -e
 
 # This script builds the sonata webpage
 
+# install dependency
+python -m pip -q install arxiv
+
 # first find all arxiv papers that correspond to members of sonata
 cd scripts
 python3 scrape_arxiv.py
