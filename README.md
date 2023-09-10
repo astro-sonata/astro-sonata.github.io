@@ -2,9 +2,8 @@
 Website for Steward Observatory Novel Astrophysical Transient Alliance (SONATA)
 
 ## Developer Instructions
-To view the website open a terminal and type the following commands:
+To view the website open a terminal and run:
 ```
-cd html
-see index.html
+./build.sh
 ```
-This will display the home page in your favorite web browser!
+This will build and display the home page in your favorite web browser!
