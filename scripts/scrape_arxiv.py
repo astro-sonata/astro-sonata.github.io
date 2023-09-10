@@ -116,18 +116,34 @@ def scrapeArxiv(members):
 
     # run the query
     s = Search(query=query,
-               max_results=10,
                sort_by=SortCriterion.SubmittedDate)
     
     # parse the search results and put into a dataframe
     post = []
+    nGood = 0
     for r in s.results():
-        postInfo = {'authors': [(a.name, approximate_name_lookup(a.name, members)) for a in r.authors],
+
+        authors = [a.name for a in r.authors]
+        
+        good = False
+        for member in members:
+            name = member[1] + ' ' + member[0]
+            if name in authors[:3]:
+                good = True
+
+        if not good: continue
+                
+        postInfo = {'authors': [(a, approximate_name_lookup(a, members)) for a in authors],
                     'title':r.title,
                     'abstract': r.summary,
                     'area': r.primary_category,
                     'arxiv_id': r.entry_id.rsplit('/',1)[1]}
         post.append(postInfo)
+
+        nGood += 1
+
+        if nGood >= 10:
+            break
 
     return post
 
