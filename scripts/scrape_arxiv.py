@@ -111,7 +111,7 @@ def scrapeArxiv(members, people):
 
     query = query[:-4]
     query += ')'
-    print(query)
+
     # run the query
     s = Search(query=query,
                sort_by=SortCriterion.SubmittedDate)
