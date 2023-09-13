@@ -91,9 +91,9 @@ def getSonataMembers():
         name = (split[-1], split[0]) # do it this way to ignore middle initial
         people[name] = {'position':'', 'role':'', 'image':''}
     
-    return people
+    return members, people # return a list of members as well as people with extra info
 
-def scrapeArxiv(members):
+def scrapeArxiv(members, people):
     '''
     Scrapes arxiv for papers by any of the sonata members
 
@@ -104,16 +104,14 @@ def scrapeArxiv(members):
         pandas dataframe of results
     '''
 
-    names = [author[1] + ' ' + author[0] for author in members]
-    
     # first generate the query
     query = 'cat:astro-ph* AND ('
-    for name in names:
+    for name in members:
         query += f'au:"{name}" OR '
 
     query = query[:-4]
     query += ')'
-
+    print(query)
     # run the query
     s = Search(query=query,
                sort_by=SortCriterion.SubmittedDate)
@@ -125,15 +123,11 @@ def scrapeArxiv(members):
 
         authors = [a.name for a in r.authors]
         
-        good = False
-        for member in members:
-            name = member[1] + ' ' + member[0]
-            if name in authors[:3]:
-                good = True
-
+        good = any(member in authors[:3] for member in members)
+        
         if not good: continue
                 
-        postInfo = {'authors': [(a, approximate_name_lookup(a, members)) for a in authors],
+        postInfo = {'authors': [(a, approximate_name_lookup(a, people)) for a in authors],
                     'title':r.title,
                     'abstract': r.summary,
                     'area': r.primary_category,
@@ -168,8 +162,8 @@ def main():
     tzmst = tz.gettz('America/Phoenix')
     run_time_local = run_time.astimezone(tzmst)
     
-    people = getSonataMembers()
-    result = scrapeArxiv(people)
+    members, people = getSonataMembers()
+    result = scrapeArxiv(members, people)
 
     context = {
         'people': people,
