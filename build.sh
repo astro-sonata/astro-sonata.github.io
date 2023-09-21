@@ -15,4 +15,3 @@ cd ../
 cd html
 cp templates/*.html .
 sed -i -e "/<!--INSERTHERE-->/r arxiv-scrape-results.html" index.html
-open index.html
