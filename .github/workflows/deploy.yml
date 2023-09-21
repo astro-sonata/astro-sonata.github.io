@@ -41,7 +41,7 @@ jobs:
       - name: Install dependences
         run: |
           python -m pip install --upgrade pip
-          python -m pip install numpy, arxiv, python-dateutil, jinja2
+          python -m pip install numpy arxiv python-dateutil jinja2
 
       - name: Build Arxiv List
         run: |
