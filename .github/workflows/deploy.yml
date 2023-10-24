@@ -32,6 +32,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4 
+        with:
+          token: ${{ secrets.PAT }}
       
       - name: Setup Python 3.9
         uses: actions/setup-python@v2
@@ -47,6 +49,14 @@ jobs:
         run: |
            chmod +x ./build.sh
            ./build.sh
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "noahfranz13@gmail.com"
+          git config --local user.name "noahfranz13"
+          git add .
+          git commit -m "Scrape ArXiv and Update Recent Projects"
+          git push
            
   # Single deploy job since we're just deploying
   deploy:
