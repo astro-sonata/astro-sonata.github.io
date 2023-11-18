@@ -1,31 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>SONATA</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
-.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
-.fa-anchor,.fa-coffee {font-size:200px}
-header {
-  background: url("./imgs/m101_sn2023ixf.jpg") no-repeat top center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-position: center -200px;
-  background-size: cover;
-  color: white;
-}
-table {
-    table-layout: fixed;
-    width: 100%;
-</style>
+	<base target="_blank">  <!-- set default link open in new tab-->
+	
+	<title>SONATA</title>
+	
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<style>
+		body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+		.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+		.fa-anchor,.fa-coffee {font-size:200px}
+		
+		header {
+			background: url("./imgs/m101_sn2023ixf.jpg") repeat top center;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-position: center -200px;
+			background-size: cover;
+			color: white;
+		}
+		
+		table {
+			table-layout: fixed;
+			width: 100%;
+		}
+
+		.members{
+			display: grid;
+			column-count: 1;
+
+			position: relative;
+			height: auto;
+		}
+
+		.members > div.row{
+
+			grid-row-start: auto;
+			grid-row-end: auto;
+			grid-column-start: 1;
+			grid-column-end: 1;
+			
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+
+			justify-content: center;
+			align-items: center;
+
+			margin: 0;
+			padding-bottom: 20px;
+			padding-top: 20px;
+			height: auto;
+
+			background-color: #fff;
+		}
+
+		.row > div{
+
+			padding: 0;
+			text-align: left;
+
+			line-height: 1.5em;
+			font-size: 20px;
+
+			background-color: #fff;
+			
+			height: fit-content;
+
+			width: 45%;
+		}
+
+		.row > div.img{
+			text-align: center;
+		}
+
+
+		@media screen and (max-width: 800px) {
+			/* For mobile phones: */
+
+			.members > div.row{
+				flex-direction: column;
+				
+			}
+
+			.row > div {
+				text-align: center;
+				width: 90%;
+			}
+
+		}
+	</style>
+
 </head>
+
 <body>
 
 <!-- Navbar -->
@@ -54,464 +129,414 @@ table {
 </header>
 
 <!-- First Grid -->
-<div class="w3-row-padding w3-padding-64 w3-container">
-  <div class="w3-content">
-    <div class="w3-center">
+<div class="w3-row-padding w3-padding-64 w3-container" style="background-color: #fff;">
+  <div class="w3-content" style="background-color: #fff;">
+    <div class="w3-center" style="background-color: #fff;">
 
-      <h1>Faculty</h1>
-      <center>
-      <table width="100%" border="0" cellpadding="0px" cellspacing="50px">
-        <tr>
-          <td valign="top"><img src="./imgs/kdalexander.jpg" style="max-width: 300px"></td>
-          <td valign="top"><h2>Kate Alexander</h2>
-            <h4><p>Assistant Professor, Department of Astronomy</p>
-            <p>Assistant Astronomer, Steward Observatory</p></h4>
-            <h5><p>Ph.D., Astronomy & Astrophysics, 2018, Harvard University</p></h5>
+	<h1>Faculty</h1>
+	<center>
+	<div class="members">
+        
+		<!-- Kate Alexander -->
+		<div class="row">
+			<div class="img">
+				<img src="./imgs/kdalexander.jpg" style="max-width: 300px">
+			</div>
+			
+			<div>
+				<h2>Kate Alexander</h2>
+				<h4><p>Assistant Professor, Department of Astronomy</p>
+				<p>Assistant Astronomer, Steward Observatory</p></h4>
+				<h5><p>Ph.D., Astronomy & Astrophysics, 2018, Harvard University</p></h5>
 
-	    <details>
-	      <summary><strong>About</strong></summary>
-	      <p style="font-size: {{ font_size_reg }}px; word-wrap: break-word; margin-left: 1rem; padding-left: 1rem; border-left: 2px solid #666;">
-	      <p>
-		Dr. Kate Alexander works in time-domain astronomy and multi-messenger
-		astrophysics. She uses a variety of telescopes to study the physics
-		powering the most extreme astrophysical transients, from gamma-ray
-		bursts to the tidal disruptions of stars by supermassive black holes.
-		She also searches for radio counterparts to gravitational wave signals
-		from compact objects mergers. Radio observations of these events probe
-		mass ejection, including the formation of relativistic jets, and provide
-		important astrophysical context.
-	      </p>
-	      <p>
-		Dr. Alexander completed her PhD in Astronomy & Astrophysics at Harvard
-		University. She has a Bachelor of Science degree in Physics from Brown
-		University. Prior to joining the University of Arizona, she was a NASA
-		Einstein Fellow and a CIERA Postdoctoral Fellow at Northwestern University.
-	      </p>
-	      </p>
-	    </details>
-	    <details>
-	      <summary><strong>Current Group</strong></summary>
-	      <p style="font-size: {{ font_size_reg }}px; word-wrap: break-word; margin-left: 1rem; padding-left: 1rem; border-left: 2px solid #666;">
-		<h5>Students</h5>
-		<ul>
-		  <li>Collin Christy</li>
-		  <li>Noah Franz</li>
-		</ul>
-	      </p>
-	    </details>
+				<details>
+					<summary><strong>About</strong></summary>
+					<p style="font-size: {{ font_size_reg }}px; word-wrap: break-word; margin-left: 1rem; padding-left: 1rem; border-left: 2px solid #666;">
+						<p>
+							Dr. Kate Alexander works in time-domain astronomy and multi-messenger astrophysics. She uses a variety of telescopes to study the physics powering the most extreme astrophysical transients, from gamma-ray bursts to the tidal disruptions of stars by supermassive black holes. She also searches for radio counterparts to gravitational wave signals from compact objects mergers. Radio observations of these events probe mass ejection, including the formation of relativistic jets, and provide important astrophysical context.
+						</p>
+						<p>
+							Dr. Alexander completed her PhD in Astronomy & Astrophysics at Harvard University. She has a Bachelor of Science degree in Physics from Brown University. Prior to joining the University of Arizona, she was a NASA Einstein Fellow and a CIERA Postdoctoral Fellow at Northwestern University.
+						</p>
+					</p>
+				</details>
+				<details>
+					<summary><strong>Current Group</strong></summary>
+					<p style="font-size: {{ font_size_reg }}px; word-wrap: break-word; margin-left: 1rem; padding-left: 1rem; border-left: 2px solid #666;">
+					<h5>Students</h5>
+					<ul>
+					<li>Collin Christy</li>
+					<li>Noah Franz</li>
+					</ul>
+					</p>
+				</details>
+			</div>
+		</div>
 
-	  </td>
-        </tr>
+		<!-- Peter Milne -->
+        <div class="row">
+          	<div class="img">
+				<img src="./imgs/pmilne.jpg" style="max-width: 300px">
+		  	</div>
+          	<div>
+				<h2>Peter Milne</h2>
+            	<h4>
+						<p>Research Professor, Steward Observatory</p>
+					<p>Ph.D., Physics, 1998, Clemson University</p>
+				</h4>
+	    		<details>
+	      			<summary><strong>About</strong></summary>
+					<p>
+						Peter studies the optical counterparts of Gamma Ray Bursts. He is a co-investigator on the Super-LOTIS (Livermore Optical Transient Imaging System), a robotic telescope that searches for these objects. He also works in the emerging field of positron astrophysics.
+					</p>
+	    		</details>
+			</div>
+		</div>
 
-        <tr>
-          <td valign="top"><img src="./imgs/djsand.jpg" style="max-width: 300px"></td>
-          <td valign="top"><h2>David Sand</h2>
-            <h4><p>Associate Professor, Department of Astronomy</p>
-            <p>Associate Astronomer, Steward Observatory</p>
-          <p>Ph.D., Astrophysics, 2006, California Institute of Technology</p></h4>
+		<!-- Mathieu Renzo -->
+        <div class="row">
+          <div class="img">
+			<img src="./imgs/mrenzo.jpg" style="max-width: 300px">
+			</div>
+			<div>
+				<h2><a href="https://users.flatironinstitute.org/~mrenzo/">Mathieu Renzo</a></h2>
+				<h4><p>Assistant Professor, Department of Astronomy</p>
+				<p>Assistant Astronomer, Steward Observatory</p></h4>
+				<h5><p>Ph.D., Astrophysics, 2019, University of Amsterdam</p></h5>
 
-	  <details>
-	    <summary><strong>About</strong></summary>
-	    <p style="font-size: {{ font_size_reg }}px; word-wrap: break-word; margin-left: 1rem; padding-left: 1rem; border-left: 2px solid #666;">
-            <p>
-	      Dr. David Sand is an observational astronomer with a variety of interests.
-	      He spends a lot of his time searching for and understanding the smallest
-	      galaxies in the Universe, as they are extremely dark matter dominated and
-	      are signposts for structure formation. Dr. Sand is also broadly interested
-	      in time domain astronomy, and in particular understanding the progenitors
-	      and explosion mechanisms of supernovae. Dr. Sand does some instrument
-	      development to further his team's scientific goals.
-	    </p>
-	    </p>
-	  </details>
-	  <details>
-	    <summary><strong>Current Group</strong></summary>
-	    <p style="font-size: {{ font_size_reg }}px; word-wrap: break-word; margin-left: 1rem; padding-left: 1rem; border-left: 2px solid #666;">
-	      <h5>Postdocs</h5>
-	      <ul>
-		<li>Griffin Hosseinzadeh</li>
-		<li>Manisha Shrestha</li>
-	      </ul>
-	      <h5>Students</h5>
-	      <ul>
-		<li>Jeniveve Pearson</li>
-	  </details>
-	  </td>
-        </tr>
+				<details>
+					<summary><strong>About</strong></summary>
+					<p style="font-size: {{ font_size_reg }}px; word-wrap: break-word; margin-left: 1rem; padding-left: 1rem; border-left: 2px solid #666;">
+					<p>  
+						I am a physicist with interest in astronomy because of the wide range of phenomena and processes occurring astrophysical context. I focus mostly on stellar astrophysics, and in particular massive stars, binary evolution, and stellar explosions. My research interest include stellar kinematics (runaway, "walkaway", and hyper-velocity stars), core-collapse and (pulsational) pair-instability supernovae, X-ray binaries, time-domain and gravitational-wave astronomy. I mainly use analytical and numerical simulations to understand massive star evolution, their explosions, and how they interact in binary systems. I use both detailed stellar structure and evolution models (e.g., with MESA, and rapid population synthesis (e.g., with binary c or COSMIC). I am learning to run hydrodynamical simulations (with ATHENA++).</p></p>
+				</details>
+				<details>
+					<summary><strong>Current Group</strong></summary>
+					<p style="font-size: {{ font_size_reg }}px; word-wrap: break-word; margin-left: 1rem; padding-left: 1rem; border-left: 2px solid #666;">
+					<h5>Students</h5>
+						<ul>
+						</ul>
+					</p>
+				</details>
+			</div>
+        </div>
 
-        <tr>
-          <td valign="top"><img src="./imgs/nsmith.jpg" style="max-width: 300px"></td>
-          <td valign="top"><h2>Nathan Smith</h2>
-            <h4><p>Professor, Department of Astronomy</p>
-            <p>Astronomer, Steward Observatory</p>
-          <p>Ph.D., Astrophysics, 2002, University of Minnesota</p></h4>
+		<!-- David Sand -->
+    	<div class="row">
+          	<div class="img">
+				<img src="./imgs/djsand.jpg" style="max-width: 300px">
+			</div>
+          	
+			<div>
+				<h2>David Sand</h2>
+				<h4>
+					<p>Associate Professor, Department of Astronomy</p>
+					<p>Associate Astronomer, Steward Observatory</p>
+					<p>Ph.D., Astrophysics, 2006, California Institute of Technology</p>
+				</h4>
 
-	  <details>
-	    <summary><strong>About</strong></summary>
-	    <p style="font-size: {{ font_size_reg }}px; word-wrap: break-word; margin-left: 1rem; padding-left: 1rem; border-left: 2px solid #666;">
+				<details>
+					<summary><strong>About</strong></summary>
+					<p style="font-size: {{ font_size_reg }}px; word-wrap: break-word; margin-left: 1rem; padding-left: 1rem; border-left: 2px solid #666;">
+						<p>
+						Dr. David Sand is an observational astronomer with a variety of interests. He spends a lot of his time searching for and understanding the smallest galaxies in the Universe, as they are extremely dark matter dominated and are signposts for structure formation. Dr. Sand is also broadly interested in time domain astronomy, and in particular understanding the progenitors and explosion mechanisms of supernovae. Dr. Sand does some instrument development to further his team's scientific goals.
+						</p>
+					</p>
+				</details>
+				<details>
+					<summary><strong>Current Group</strong></summary>
+					<p style="font-size: {{ font_size_reg }}px; word-wrap: break-word; margin-left: 1rem; padding-left: 1rem; border-left: 2px solid #666;">
+					<h5>Postdocs</h5>
+					<ul>
+					<li>Griffin Hosseinzadeh</li>
+					<li>Manisha Shrestha</li>
+					</ul>
+					<h5>Students</h5>
+					<ul>
+					<li>Jeniveve Pearson</li>
+				</details>
+	  	  	</div>
+        </div>
 
-            <p>
-	      Dr. Nathan Smith is interested in understanding the evolution and fate of
-	      massive stars, and their influence on the surrounding interstellar medium.
-	      His primary focus is on the violent explosions and eruptions that occur as
-	      a massive star approaches its death, especially those of the most massive
-	      and luminous stars known. Although these stars drive the energetics of the
-	      interstellar medium and are extremely bright and easy to observe, the way
-	      they reach their demise and finally explode is still very poorly understood.
-	      Nathan specializes in multiwavelength spectroscopy and high-resolution imaging
-	      of supernovae and other transients in order to study explosions observed
-	      in real time, and he studies spatially resolved circumstellar material in
-	      order to constrain the physical properties of mass-loss episodes that have
-	      occurred in the past.
-	    </p>
-            <p>
-	      Another main area of interest is the evolution of massive star-forming
-	      regions, where energy input from the radiation, winds, and explosions of
-	      massive stars can influence star and planet formation in the surrounding
-	      cloud. Nathan performs detailed mutiwavelength studies of nearby stellar
-	      nurseries, working toward a complete picture of the complex processes that
-	      dominate the massive star-forming environment, trying to understand the
-	      interplay between star death and birth. This impacts our own origins, since
-	      the Solar system is thought to have formed in such a region, probably exposed
-	      to nearby supernovae.
-	    </p>
-            <p>
-	      Nathan conducts observations using the Hubble Space Telescope and other
-	      NASA missions, plus numerous ground-based optical/infrared telescopes.
-	      Although primarily an observer, he incorporates theoretical tools in his
-	      work, and has a broad interest in Galactic astronomy including stellar
-	      evolution, mass loss, circumstellar material, shock physics, HII regions,
-	      disks, jets, planetary nebulae, dust formation, and nebular spectroscopy.
-	      Nathan earned undergraduate degrees in music and astronomy, plus a master's
-	      degree and a Ph.D. in Astrophysics.</p>
-	    </p>
-	  </details>
-	  <details>
-	    <summary><strong>Current Group</strong></summary>
-	    <p style="font-size: {{ font_size_reg }}px; word-wrap: break-word; margin-left: 1rem; padding-left: 1rem; border-left: 2px solid #666;">
-	      <h5>Students</h5>
-	      <ul>
-		<li>Brian Hsu</li>
-	  </details>
-	  </td>
-        </tr>
+		<!-- Nathan Smith -->
+        <div class="row">
+			<div class="img">
+				<img src="./imgs/nsmith.jpg" style="max-width: 300px">
+			</div>
+			<div>
+				<h2>Nathan Smith</h2>
+				<h4><p>Professor, Department of Astronomy</p>
+				<p>Astronomer, Steward Observatory</p>
+				<p>Ph.D., Astrophysics, 2002, University of Minnesota</p></h4>
 
-        <tr>
-          <td valign="top"><img src="./imgs/mrenzo.jpg" style="max-width: 300px"></td>
-          <td valign="top"><h2><a href="https://users.flatironinstitute.org/~mrenzo/">Mathieu Renzo</a></h2>
-            <h4><p>Assistant Professor, Department of Astronomy</p>
-            <p>Assistant Astronomer, Steward Observatory</p></h4>
-            <h5><p>Ph.D., Astrophysics, 2019, University of Amsterdam</p></h5>
+				<details>
+					<summary><strong>About</strong></summary>
+					<p style="font-size: {{ font_size_reg }}px; word-wrap: break-word; margin-left: 1rem; padding-left: 1rem; border-left: 2px solid #666;">
 
-	    <details>
-	      <summary><strong>About</strong></summary>
-	      <p style="font-size: {{ font_size_reg }}px; word-wrap: break-word; margin-left: 1rem; padding-left: 1rem; border-left: 2px solid #666;">
-		       <p>  I am a physicist with interest in astronomy because of the wide range
-            of phenomena and processes occurring astrophysical context. I focus mostly
-            on stellar astrophysics, and in particular massive stars, binary evolution,
-            and stellar explosions. My research interest include stellar kinematics (runaway,
-            "walkaway", and hyper-velocity stars), core-collapse and (pulsational)
-            pair-instability supernovae, X-ray binaries, time-domain and gravitational-wave
-            astronomy. I mainly use analytical and numerical simulations to understand massive
-            star evolution, their explosions, and how they interact in binary systems. I use
-            both detailed stellar structure and evolution models (e.g., with MESA, and rapid
-            population synthesis (e.g., with binary c or COSMIC). I am learning to run hydrodynamical
-            simulations (with ATHENA++).</p></p>
-	    </details>
-	    <details>
-	      <summary><strong>Current Group</strong></summary>
-	      <p style="font-size: {{ font_size_reg }}px; word-wrap: break-word; margin-left: 1rem; padding-left: 1rem; border-left: 2px solid #666;">
-		<h5>Students</h5>
-		<ul>
-		</ul>
-	      </p>
-	    </details>
-	  </td>
-        </tr>
+					<p>
+						Dr. Nathan Smith is interested in understanding the evolution and fate of
+						massive stars, and their influence on the surrounding interstellar medium. His primary focus is on the violent explosions and eruptions that occur as a massive star approaches its death, especially those of the most massive and luminous stars known. Although these stars drive the energetics of the interstellar medium and are extremely bright and easy to observe, the way they reach their demise and finally explode is still very poorly understood. Nathan specializes in multiwavelength spectroscopy and high-resolution imaging of supernovae and other transients in order to study explosions observed in real time, and he studies spatially resolved circumstellar material in order to constrain the physical properties of mass-loss episodes that have occurred in the past.
+					</p>
+					<p>
+						Another main area of interest is the evolution of massive star-forming regions, where energy input from the radiation, winds, and explosions of massive stars can influence star and planet formation in the surrounding cloud. Nathan performs detailed mutiwavelength studies of nearby stellar nurseries, working toward a complete picture of the complex processes that dominate the massive star-forming environment, trying to understand the interplay between star death and birth. This impacts our own origins, since the Solar system is thought to have formed in such a region, probably exposedto nearby supernovae.
+					</p>
+					<p>
+						Nathan conducts observations using the Hubble Space Telescope and other NASA missions, plus numerous ground-based optical/infrared telescopes. Although primarily an observer, he incorporates theoretical tools in his work, and has a broad interest in Galactic astronomy including stellar evolution, mass loss, circumstellar material, shock physics, HII regions, disks, jets, planetary nebulae, dust formation, and nebular spectroscopy. Nathan earned undergraduate degrees in music and astronomy, plus a master's degree and a Ph.D. in Astrophysics.</p>
+					</p>
+				</details>
+				<details>
+					<summary><strong>Current Group</strong></summary>
+					<p style="font-size: {{ font_size_reg }}px; word-wrap: break-word; margin-left: 1rem; padding-left: 1rem; border-left: 2px solid #666;">
+					<h5>Students</h5>
+					<ul>
+					<li>Brian Hsu</li>
+				</details>
+			</div>
+        </div>
 
-        <tr>
-          <td valign="top"><img src="./imgs/pmilne.jpg" style="max-width: 300px"></td>
-          <td valign="top"><h2>Peter Milne</h2>
-            <h4><p>Research Professor, Steward Observatory</p>
-	      <p>Ph.D., Physics, 1998, Clemson University</p></h4>
-	    <details>
-	      <summary><strong>About</strong></summary>
-	      <p style="font-size: {{ font_size_reg }}px; word-wrap: break-word; margin-left: 1rem; padding-left: 1rem; border-left: 2px solid #666;">
-		<p>
-		  Peter studies the optical counterparts of Gamma Ray Bursts. He is a
-		  co-investigator on the Super-LOTIS (Livermore Optical Transient Imaging
-		  System), a robotic telescope that searches for these objects. He also
-		  works in the emerging field of positron astrophysics.
-		</p>
-	      </p>
-	    </details>
-          </td>
-        </tr>
-        </table>
-      </center>
+	</div>
+	</center>
 
-      <h1>Scientists</h1>
-      <center>
-      <table width="100%" border="0" cellpadding="0px" cellspacing="50px">
-        <tr>
-          <td valign="top"><img src="./imgs/gwilliams.jpg" style="max-width: 300px"></td>
-          <td valign="top"><h2><a href="https://ggrantwilliams.com/#intro">Grant Williams</a></h2>
-            <h4><p>Astronomer, Steward Observatory</p>
-            <p>Director, MMT Observatory</p>
-              <p>Ph.D., Physics, 2000, Clemson University</p></h4>
-	    <details>
-	    <summary><strong>About</strong></summary>
-	    <p style="font-size: {{ font_size_reg }}px; word-wrap: break-word; margin-left: 1rem; padding-left: 1rem; border-left: 2px solid #666;">
-	      <p>I'm an astronomer at the University of Arizona and the current Director of the MMT Observatory. I earned a Bachelor’s degree in Physics from the University at Buffalo in 1994 and a PhD from Clemson University in 2000.</p>
-	    </p>
-	    </details>
-          </td>
-        </tr>
+    <h1>Scientists</h1> 
+	<center>
+    <div class="members">
 
-        <tr>
-          <td valign="top"><img src="./imgs/rlau.jpg" style="max-width: 300px"></td>
-          <td valign="top"><h2><a href="https://sites.google.com/site/ryanlauastro/?pli=1">Ryan Lau</a></h2>
-            <h4><p>Assistant Astronomer, NSF's NOIRLab</p>
-            <p>Ph.D., Astronomy and Space Sciences, 2014, Cornell University</p></h4>
+		<!-- Ryan Lau -->
+        <div class="row">
+			<div class="img"><img src="./imgs/rlau.jpg" style="max-width: 300px"></div>
+			<div>
+				<h2><a href="https://sites.google.com/site/ryanlauastro/?pli=1">Ryan Lau</a></h2>
+				<h4><p>Assistant Astronomer, NSF's NOIRLab</p>
+				<p>Ph.D., Astronomy and Space Sciences, 2014, Cornell University</p></h4>
 
-	    <details>
-	    <summary><strong>About</strong></summary>
-	    <p style="font-size: {{ font_size_reg }}px; word-wrap: break-word; margin-left: 1rem; padding-left: 1rem; border-left: 2px solid #666;">
+				<details>
+					<summary><strong>About</strong></summary>
 
-            <p>
-	      Hi, I'm an Assistant Astronomer at NSF's NOIRLab in Tucson, AZ, and was
-	      born and raised in Honolulu, Hawaii. My research focuses on massive evolved
-	      stars, infrared transients, dust production/destruction, obscured high-mass
-	      x-ray binaries, and star formation.
-	    </p>
-            <p>
-	      I'm an infrared astronomer, which is a tricky wavelength to observe since
-	      almost everything around us (on Earth) is emitting infrared photons like crazy, and
-	      water vapor in our atmosphere absorbs infrared photons from the astronomical
-	      targets we are interested in. However, we can overcome these challenges with
-	      observatories up on the highest mountains on Earth, observatories that fly
-	      into the stratosphere, and observatories up in space. This is why it's great
-	      having awesome facilities like Keck, Subaru, Gemini, SOFIA, and JWST.
-	    </p>
-            <p>
-	      The science that we can learn from these infrared observatories is absolutely
-	      worth it. In the infrared, we can peer into the densest clouds to reveal the
-	      birth of new stars, probe the material ejected from massive stars as they
-	      near the end of their lives, and even trace the outcome of merging neutron
-	      stars that also produce gravitational waves signatures.
-	    </p>
-	    </p>
-	    </details>
-          </td>
-        </tr>
-        </table>
-      </center>
+					<p>
+						Hi, I'm an Assistant Astronomer at NSF's NOIRLab in Tucson, AZ, and was born and raised in Honolulu, Hawaii. My research focuses on massive evolved stars, infrared transients, dust production/destruction, obscured high-mass x-ray binaries, and star formation.
+					</p>
+					<p>
+						I'm an infrared astronomer, which is a tricky wavelength to observe since almost everything around us (on Earth) is emitting infrared photons like crazy, and water vapor in our atmosphere absorbs infrared photons from the astronomical targets we are interested in. However, we can overcome these challenges with observatories up on the highest mountains on Earth, observatories that fly into the stratosphere, and observatories up in space. This is why it's great having awesome facilities like Keck, Subaru, Gemini, SOFIA, and JWST.
+					</p>
+					<p>
+						The science that we can learn from these infrared observatories is absolutely worth it. In the infrared, we can peer into the densest clouds to reveal the birth of new stars, probe the material ejected from massive stars as they near the end of their lives, and even trace the outcome of merging neutron stars that also produce gravitational waves signatures.
+					</p>
+				</details>
+			</div>
+        </div>
 
-      <h1>Postdocs</h1>
-        <center>
-        <table width="100%" border="0" cellpadding="0px" cellspacing="50px">
-        <tr>
-          <td valign="top"><img src="./imgs/ebeasor.jpg" style="max-width: 300px"></td>
-          <td valign="top"><h2>Emma Beasor</h2>
-            <h4><p>Postdoctoral Research Associate I, Bart J. Bok Postdoctoral Fellow</p>
-            <p>Ph.D., Astrophysics, 2019, Liverpool John Moores University</p></h4>
-	    <details>
-	    <summary><strong>About</strong></summary>
-	    <p style="font-size: {{ font_size_reg }}px; word-wrap: break-word; margin-left: 1rem; padding-left: 1rem; border-left: 2px solid #666;">
-	      <p>My research focuses on the evolution of cool supergiant stars, with the aim
-	      of constraining the progenitor-supernova-remnant connection. I do this
-	      using both observations and stellar evolution models of red supergiants,
-	      yellow supergiants, and supernovae remnants. I am also interested in using
-	      massive stellar populations (such as Westerlund 1) as a tool for understanding
-	      single and binary stellar evolution. Ultimately, I hope to determine which
-	      stars explode, what those explosions look like, and which fail to explode entirely.</p>
-	    </p>
-	    </details>
-	  </td>
-        </tr>
+		<!-- Grant Williams -->
+		<div class="row">
+			<div class="img"><img src="./imgs/gwilliams.jpg" style="max-width: 300px"></div>
+			<div><h2><a href="https://ggrantwilliams.com/#intro">Grant Williams</a></h2>
+				<h4><p>Astronomer, Steward Observatory</p>
+				<p>Director, MMT Observatory</p>
+				<p>Ph.D., Physics, 2000, Clemson University</p></h4>
+				<details>
+					<summary><strong>About</strong></summary>
+						<p>I'm an astronomer at the University of Arizona and the current Director of the MMT Observatory. I earned a Bachelor’s degree in Physics from the University at Buffalo in 1994 and a PhD from Clemson University in 2000.</p>
+				</details>
+			</div>
+        </div>
 
-        <tr>
-          <td valign="top"><img src="./imgs/ghosseinzadeh.jpg" style="max-width: 300px"></td>
-          <td valign="top"><h2>Griffin Hosseinzadeh</h2>
-            <h4><p>Postdoctoral Research Associate</p>
-              <p>Ph.D., Physics, 2018, University of California, Santa Barbara</p></h4>
-	    <details>
-	    <summary><strong>About</strong></summary>
-	    <p style="font-size: {{ font_size_reg }}px; word-wrap: break-word; margin-left: 1rem; padding-left: 1rem; border-left: 2px solid #666;">
+		
+    </div>
+    </center>
 
-            <p>
-	      I'm a postdoctoral researcher at Steward Observatory at the University
-	      of Arizona, where I work with Professor David Sand. In my research, I try
-	      to link the zoo of explosions we observe in the night sky to the stars that
-	      produce them, in order to understand the last years to months of a star's
-	      life. I'm also interested in what we can learn from optical observations
-	      of gravitational wave sources.
-	    </p>
-            <p>
-	      I previously worked at the Center for Astrophysics | Harvard & Smithsonian,
-	      after graduating from the UC Santa Barbara with a Ph.D. in astrophysics
-	      in 2018. Before that, I received a B.A. in physics from UC Berkeley in 2012.
-	    </p>
-            <p>
-	      In my free time, I like to play music (trombone, bass, etc.) and go on
-	      long bike trips.
-	    </p>
-	    </p>
-	    <p><a href="http://griffin-h.github.io/">Personal Website</a></p>
-          </td>
-        </tr>
+    <h1>Postdocs</h1>
+	<center>
+	<div class="members">
 
-        <tr>
-          <td valign="top"><img src="./imgs/mshrestha.jpg" style="max-width: 300px"></td>
-          <td valign="top"><h2>Manisha Shrestha</h2>
-            <h4><p>Postdoctoral Research Associate</p>
-            <p>Ph.D., Astrophysics, 2018, University of Denver</p></h4>
-	    <details>
-	    <summary><strong>About</strong></summary>
-	    <p style="font-size: {{ font_size_reg }}px; word-wrap: break-word; margin-left: 1rem; padding-left: 1rem; border-left: 2px solid #666;">
-            <p>Manisha joined Steward Observatory in the fall of 2022 to work with Prof. David Sand. Her research focuses on studies of transients such as gamma-ray bursts, young supernovae, and kilonovae. During her previous postdoctoral position at Astrophysics Research Institute in Liverpool, she used optical observations of gamma-ray bursts to study their magnetic field properties. In addition, she has been working on computational simulations of kilonovae emissions to predict their photometric and polarimetric behavior. She is interested in using these kilonova models to understand better the physics of the electromagnetic counterparts of gravitational wave sources. She received her PhD from the University of Denver in 2018.</p>
-	    </p>
-	    </details>
-	  </td>
-        </tr>
+		<!-- Emma Beasor -->
+        <div class="row">
+          	<div class="img"><img src="./imgs/ebeasor.jpg" style="max-width: 300px"></div>
+          	<div>
+				<h2>Emma Beasor</h2>
+				<h4><p>Postdoctoral Research Associate I, Bart J. Bok Postdoctoral Fellow</p>
+				<p>Ph.D., Astrophysics, 2019, Liverpool John Moores University</p></h4>
+	    		<details>
+					<summary><strong>About</strong></summary>
+					<p style="font-size: {{ font_size_reg }}px; word-wrap: break-word; margin-left: 1rem; padding-left: 1rem; border-left: 2px solid #666;">
+						<p>
+							My research focuses on the evolution of cool supergiant stars, with the aim of constraining the progenitor-supernova-remnant connection. I do this using both observations and stellar evolution models of red supergiants, yellow supergiants, and supernovae remnants. I am also interested in using massive stellar populations (such as Westerlund 1) as a tool for understanding single and binary stellar evolution. Ultimately, I hope to determine which stars explode, what those explosions look like, and which fail to explode entirely.
+						</p>
+					</p>
+				</details>
+			</div>
+        </div>
 
-        <tr>
-          <td valign="top"><img src="./imgs/aboestrom.jpg" style="max-width: 300px"></td>
-          <td valign="top"><h2><a href="https://abostroem.wixsite.com/home">Azalee Boestrom</a></h2>
-            <h4><p>Postdoctoral Research Associate I, LSSTC Catalyst Fellow</p>
-            <p>Ph.D., Physics, 2021, University of California, Davis</p></h4>
-	    <details>
-	    <summary><strong>About</strong></summary>
-	    <p style="font-size: {{ font_size_reg }}px; word-wrap: break-word; margin-left: 1rem; padding-left: 1rem; border-left: 2px solid #666;">
-	    <p>
-	      I am an LSSTC Catalyst Fellow at University of Arizona  where I am working on connecting massive star supernovae to their progenitor. In addition to understanding exploding stars, I am a strong proponent of open source development, tools, and open science. I believe science is better when we help each other succeed and passionately promote education and equity.​
-	    </p>
-	    </p>
-	    </details>
-          </td>
-        </tr>
-      </table>
+		<!-- Azalee Boestrom -->
+        <div class="row">
+          	<div class="img"><img src="./imgs/aboestrom.jpg" style="max-width: 300px"></div>
+          	<div>
+				<h2><a href="https://abostroem.wixsite.com/home">Azalee Boestrom</a></h2>
+            	<h4><p>Postdoctoral Research Associate I, LSSTC Catalyst Fellow</p>
+            	<p>Ph.D., Physics, 2021, University of California, Davis</p></h4>
+	   			<details>
+	    			<summary><strong>About</strong></summary>
+	    			<p style="font-size: {{ font_size_reg }}px; word-wrap: break-word; margin-left: 1rem; padding-left: 1rem; border-left: 2px solid #666;">
+	    				<p>
+	      				I am an LSSTC Catalyst Fellow at University of Arizona  where I am working on connecting massive star supernovae to their progenitor. In addition to understanding exploding stars, I am a strong proponent of open source development, tools, and open science. I believe science is better when we help each other succeed and passionately promote education and equity.​
+	    				</p>
+	    			</p>
+	    		</details>
+          	</div>
+        </div>
+
+		<!-- Griffin Hosseinzadeh -->
+        <div class="row">
+          	<div class="img">
+				<img src="./imgs/ghosseinzadeh.jpg" style="max-width: 300px">
+			</div>
+          	<div>
+				<h2>Griffin Hosseinzadeh</h2>
+				<h4> 
+					<p>Postdoctoral Research Associate</p>
+					<p>Ph.D., Physics, 2018, University of California, Santa Barbara</p></h4>
+				<details>
+	    			<summary><strong>About</strong></summary>
+	    			<p style="font-size: {{ font_size_reg }}px; word-wrap: break-word; margin-left: 1rem; padding-left: 1rem; border-left: 2px solid #666;">
+
+            			<p>
+	      					I'm a postdoctoral researcher at Steward Observatory at the University of Arizona, where I work with Professor David Sand. In my research, I try to link the zoo of explosions we observe in the night sky to the stars that produce them, in order to understand the last years to months of a star's life. I'm also interested in what we can learn from optical observations of gravitational wave sources.
+	    				</p>
+            			<p> 
+							I previously worked at the Center for Astrophysics | Harvard & Smithsonian, after graduating from the UC Santa Barbara with a Ph.D. in astrophysics in 2018. Before that, I received a B.A. in physics from UC Berkeley in 2012.
+	    				</p>
+            			<p>
+	      					In my free time, I like to play music (trombone, bass, etc.) and go on long bike trips.
+	    				</p>
+	   				</p>
+	    			<p> <a href="http://griffin-h.github.io/">Personal Website</a> </p>
+				</details>
+           	</div>
+        </div>
+
+		<!-- Manisha Shrestha -->
+        <div class="row">
+          	<div class="img"><img src="./imgs/mshrestha.jpg" style="max-width: 300px"></div>
+          	<div>
+				<h2>Manisha Shrestha</h2>
+            	<h4><p>Postdoctoral Research Associate</p>
+            	<p>Ph.D., Astrophysics, 2018, University of Denver</p></h4>
+	    		<details>
+	    			<summary><strong>About</strong></summary>
+					<p style="font-size: {{ font_size_reg }}px; word-wrap: break-word; margin-left: 1rem; padding-left: 1rem; border-left: 2px solid #666;">
+						<p> 
+							Manisha joined Steward Observatory in the fall of 2022 to work with Prof. David Sand. Her research focuses on studies of transients such as gamma-ray bursts, young supernovae, and kilonovae. During her previous postdoctoral position at Astrophysics Research Institute in Liverpool, she used optical observations of gamma-ray bursts to study their magnetic field properties. In addition, she has been working on computational simulations of kilonovae emissions to predict their photometric and polarimetric behavior. She is interested in using these kilonova models to understand better the physics of the electromagnetic counterparts of gravitational wave sources. She received her PhD from the University of Denver in 2018.
+						</p>
+					</p>
+	    		</details>
+	  		</div>
+        </div>
+
+		
+	</div>
     </center>
 
 
-        <h1>Grad Students</h1>
-        <center>
-        <table width="100%" border="0" cellpadding="0px" cellspacing="50px">
+	<h1>Grad Students</h1>
+	<center>
+	
+	<div class="members">
+		<!-- Collin Christy -->
+        <div class="row">
+        	<div class="img"><img src="./imgs/cchristy.jpg" style="max-width: 300px"></div>
+          	<div>
+				<h2>Collin Christy</h2>
+            	<h4>B.S., Physics and Astrophysics, 2021, The Ohio State University</h4>
+	    		<details>
+	    			<summary><strong>About</strong></summary>
+	    			<p style="font-size: {{ font_size_reg }}px; word-wrap: break-word; margin-left: 1rem; padding-left: 1rem; border-left: 2px solid #666;">
+						<p>
+							I am an Astrophysics Ph.D. student at the University of Arizona. My research interests broadly fall within the field of time-domain astronomy, with a focus on extragalactic transients and stellar variability. I am currently working with Dr. Kate Alexander on studying the radio counterparts of Tidal Disruption Events (TDEs). I am also a former member of the All-Sky Automated Survey for SuperNovae (ASAS-SN) team and a current collaborator and researcher for Citizen ASAS-SN. I graduated from The Ohio State University in 2021, with a Bachelor's of Science in Astronomy and Physics.
+						</p>
+            		</p>
+	    		</details>
+	  		</div>
+        </div>
+		
+		<!-- Noah Franz -->
+        <div class="row">
+           	<div class="img"><img src="./imgs/nfranz.jpg" style="max-width: 300px"></div>
+          	<div>
+				<h2><a href="https://noahfranz13.github.io/index.html">Noah Franz</a></h2>
+            	<h4>B.S., Physics and Data Science, 2023, Siena College</h4>
+	    		<details>
+	    			<summary><strong>About</strong></summary>
+	    			<p style="font-size: {{ font_size_reg }}px; word-wrap: break-word; margin-left: 1rem; padding-left: 1rem; border-left: 2px solid #666;">
+            		<p>
+						In spring 2023, I graduated from Siena College with a B.S. Degree. In undergraduate, I double majored in Physics and Applied Data Science and obtained minors in Astronomy and Mathematics. During these four years, I also discovered my strong interests in astronomy, big data, data science, and programming. Throughout undergraduate, I explored a wide variety of research interests including working with the Dark Energy Spectroscopic Instrument, Berkeley Search for Extraterrestrial Intelligence, and The University of Hawaii Institute for Astronomy.
+	    			</p>
+            		<p>
+						In fall 2023, I started applying these interests as an Astronomy graduate student at the University of Arizona Department of Astronomy (Steward Observatory). I am motivated to study astronomy by the possibilities to unravel deep mysteries of the universe. One area I am especially interested in is understanding black holes. As a result, I plan to study transients like tidal disruption events which can provide important insight into the area surrounding these mysterious objects.
+	    			</p>
+	    			</p>
+	    		</details>
+          	</div>
+        </div>
+		
+		<!-- Brian Hsu -->
+		<div class="row">
+          	<div class="img"><img src="./imgs/bhsu.jpg" style="max-width: 300px"></div>
+          	<div>
+				<h2><a href="https://brianjjhsu.com">Brian Hsu</a></h2>
+            	<h4>B.A., Physics and Astrophysics, 2023, Harvard University</h4>
+	    		<details>
+	    			<summary><strong>About</strong></summary>
+	    			<p style="font-size: {{ font_size_reg }}px; word-wrap: break-word; margin-left: 1rem; padding-left: 1rem; border-left: 2px solid #666;">
+            			<p>
+	      					I am a first-year Ph.D. student in Astronomy and Astrophysics at Steward Observatory, University of Arizona. I graduated with a B.A. in Astrophysics and Physics from Harvard University in 2023, where I worked with the Berger Cosmic Transients Lab on the optical study of Type I superluminous supernovae and UV analysis of their host galaxies, as well as applying machine learning techniques in preparation for the Vera C. Rubin Observatory Legacy Survey of Space and Time.
+	    				</p>
+            			<p>
+	      					Currently, I am working with Prof. Nathan Smith and Dr. Grant Williams on studying the simultaneous temporal evolution of spectropolarimetric, spectroscopic, and photometric properties of Type IIn supernovae.
+	    				</p>
+            			<p>
+							I am originally from Queens, New York, but spent most of my childhood in Taiwan. In my spare time, I like to play volleyball, do yoga, and recently I’ve been trying to learn how to crochet.
+	    				</p>
+	    			</p>
+	   			</details>
+          	</div>
+        </div>
 
-	<tr>
-          <td valign="top"><img src="./imgs/bhsu.jpg" style="max-width: 300px"></td>
-          <td valign="top"><h2><a href="https://brianjjhsu.com">Brian Hsu</a></h2>
-            <h4>B.A., Physics and Astrophysics, 2023, Harvard University</h4>
-	    <details>
-	    <summary><strong>About</strong></summary>
-	    <p style="font-size: {{ font_size_reg }}px; word-wrap: break-word; margin-left: 1rem; padding-left: 1rem; border-left: 2px solid #666;">
-            <p>
-	      I am a first-year Ph.D. student in Astronomy and Astrophysics at Steward
-	      Observatory, University of Arizona. I graduated with a B.A. in Astrophysics
-	      and Physics from Harvard University in 2023, where I worked with the Berger
-	      Cosmic Transients Lab on the optical study of Type I superluminous supernovae
-	      and UV analysis of their host galaxies, as well as applying machine learning
-	      techniques in preparation for the Vera C. Rubin Observatory Legacy Survey of
-	      Space and Time.
-	    </p>
-            <p>
-	      Currently, I am working with Prof. Nathan Smith and Dr. Grant Williams on
-	      studying the simultaneous temporal evolution of spectropolarimetric,
-	      spectroscopic, and photometric properties of Type IIn supernovae.
-	    </p>
-            <p>I am originally from Queens, New York, but spent most of my childhood in
-	      Taiwan. In my spare time, I like to play volleyball, do yoga, and recently
-	      I’ve been trying to learn how to crochet.
-	    </p>
-	    </p>
-	    </details>
-          </td>
-        </tr>
+		<!-- Vikram Manikantan -->
+		<div class="row">
+          	<div class="img"><img src="./imgs/vikram.jpg" style="max-width: 300px"></div>
+          	<div>
+				<h2><a href="https://www.vikrammanikantan.com/" target="_blank">Vikram Manikantan</a></h2>
+            	<h4>B.A., Physics, 2022, Northwestern University</h4>
+	    		<details>
+					<summary><strong>About</strong></summary>
+					<p style="font-size: {{ font_size_reg }}px; word-wrap: break-word; margin-left: 1rem; padding-left: 1rem; border-left: 2px solid #666;">
+						<p>
+							Vikram is a theoretical and computational astrophysicist whose research focuses on the multi-messenger nature of compact objects such as binary black holes, neutron stars, supernovae, and other high-energy transients. He uses numerical relativity and magnetohydrodynamic simulations, such as Einstein Toolkit, IllinoisGRMHD,  and Athena++, to study these systems in a variety of contexts. His current work focuses on the late-time evolution of accreting supermassive black hole binaries in the LISA band. Future work will hopefully expand the current numerical framework to study core-collapse supernova and other high-energy transients.
+						</p>
+					</p>	
+	    		</details>
+          	</div>
+        </div>
+		
+		<!-- Jeniveve Pearson -->
+        <div class="row">
+          	<div class="img"><img src="./imgs/jpearson.jpg" style="max-width: 300px"></div>
+          	<div>
+				<h2>Jeniveve Pearson</h2>
+            	<h4>B.S., Physics and Astrophysics, 2020, The Ohio State University</h4>
+	    		<details>
+	    			<summary><strong>About</strong></summary>
+	    			<p style="font-size: {{ font_size_reg }}px; word-wrap: break-word; margin-left: 1rem; padding-left: 1rem; border-left: 2px solid #666;">
+        				<p>
+							Jeniveve focuses on studying young supernovae in the nearby universe to understand their progenitors and explosion mechanisms. She is also interested in late-stage red supergiants, particularly on the higher mass end (18-30 M$_\odot$), and predicting the final moments of their lives. Jeniveve has been a PhD student working under David Sand since 2020, when she came to University of Arizona after graduating with a B.S. from The Ohio State University with a double major in Physics and Astrophysics and a minor in Studio Art.
+        				</p>
+            		</p>
+	    		</details>
+	  		</div>
+        </div>
 
-        <tr>
-          <td valign="top"><img src="./imgs/cchristy.jpg" style="max-width: 300px"></td>
-          <td valign="top"><h2>Collin Christy</h2>
-            <h4>B.S., Physics and Astrophysics, 2021, The Ohio State University</h4>
-	    <details>
-	    <summary><strong>About</strong></summary>
-	    <p style="font-size: {{ font_size_reg }}px; word-wrap: break-word; margin-left: 1rem; padding-left: 1rem; border-left: 2px solid #666;">
-            <p>I am an Astrophysics Ph.D. student at the University of Arizona. My
-	      research interests broadly fall within the field of time-domain astronomy,
-	      with a focus on extragalactic transients and stellar variability. I am
-	      currently working with Dr. Kate Alexander on studying the radio counterparts
-	      of Tidal Disruption Events (TDEs). I am also a former member of the All-Sky
-	      Automated Survey for SuperNovae (ASAS-SN) team and a current collaborator
-	      and researcher for Citizen ASAS-SN. I graduated from The Ohio State
-	      University in 2021, with a Bachelor's of Science in Astronomy and Physics.
-	    </p>
-            </p>
-	    </details>
-	  </td>
-        </tr>
+		
 
-        <tr>
-          <td valign="top"><img src="./imgs/nfranz.jpg" style="max-width: 300px"></td>
-          <td valign="top"><h2><a href="https://noahfranz13.github.io/index.html">Noah Franz</a></h2>
-            <h4>B.S., Physics and Data Science, 2023, Siena College</h4>
-	    <details>
-	    <summary><strong>About</strong></summary>
-	    <p style="font-size: {{ font_size_reg }}px; word-wrap: break-word; margin-left: 1rem; padding-left: 1rem; border-left: 2px solid #666;">
-            <p>In spring 2023, I graduated from Siena College with a B.S. Degree. In
-	      undergraduate, I double majored in Physics and Applied Data Science and
-	      obtained minors in Astronomy and Mathematics. During these four years,
-	      I also discovered my strong interests in astronomy, big data, data science,
-	      and programming. Throughout undergraduate, I explored a wide variety of
-	      research interests including working with the Dark Energy Spectroscopic
-	      Instrument, Berkeley Search for Extraterrestrial Intelligence, and The
-	      University of Hawaii Institute for Astronomy.
-	    </p>
-            <p>
-	      In fall 2023, I started applying these interests as an Astronomy graduate
-	      student at the University of Arizona Department of Astronomy (Steward Observatory).
-	      I am motivated to study astronomy by the possibilities to unravel deep
-	      mysteries of the universe. One area I am especially interested in is
-	      understanding black holes. As a result, I plan to study transients like
-	      tidal disruption events which can provide important insight into the area
-	      surrounding these mysterious objects.
-	    </p>
-	    </p>
-	    </details>
-          </td>
-        </tr>
-
-        <tr>
-          <td valign="top"><img src="./imgs/jpearson.jpg" style="max-width: 300px"></td>
-          <td valign="top"><h2>Jeniveve Pearson</h2>
-            <h4>B.S., Physics and Astrophysics, 2020, The Ohio State University</h4>
-	    <details>
-	    <summary><strong>About</strong></summary>
-	    <p style="font-size: {{ font_size_reg }}px; word-wrap: break-word; margin-left: 1rem; padding-left: 1rem; border-left: 2px solid #666;">
-        <p>Jeniveve focuses on studying young supernovae in the nearby universe to understand their progenitors and explosion mechanisms. She is also interested in late-stage red supergiants, particularly on the higher mass end (18-30 M$_\odot$), and predicting the final moments of their lives. Jeniveve has been a PhD student working under David Sand since 2020, when she came to University of Arizona after graduating with a B.S. from The Ohio State University with a double major in Physics and Astrophysics and a minor in Studio Art.
-        </p>
-            </p>
-	    </details>
-	  </td>
-        </tr>
-
-	<tr>
-          <td valign="top"><img src="./imgs/vikram.jpg" style="max-width: 300px"></td>
-          <td valign="top"><h2><a href="https://vikrammanikantan.com/">Vikram Manikantan</a></h2>
-            <h4>B.A., Physics, 2022, Northwestern University</h4>
-	    <details>
-	    <summary><strong>About</strong></summary>
-	    <p style="font-size: {{ font_size_reg }}px; word-wrap: break-word; margin-left: 1rem; padding-left: 1rem; border-left: 2px solid #666;">
-            <p>
-	      Vikram is a theoretical and computational astrophysicist whose research focuses on the multi-messenger nature of compact objects such as binary black holes, neutron stars, supernovae, and other high-energy transients. He uses numerical relativity and magnetohydrodynamic simulations, such as Einstein Toolkit, IllinoisGRMHD,  and Athena++, to study these systems in a variety of contexts. His current work focuses on the late-time evolution of accreting supermassive black hole binaries in the LISA band. Future work will hopefully expand the current numerical framework to study core-collapse supernova and other high-energy transients.
-	    </p>
-            </p>
-	    </details>
-          </td>
-        </tr>
-
-      </table>
-      </center>
-
-
+	</div>
+    </center>
 
     </div>
   </div>
