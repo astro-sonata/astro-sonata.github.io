@@ -1,3 +1,5 @@
+@import url(https://use.typekit.net/kjf1eoy.css); /* Imports Adobe Pro fonts added to my (Vikram's) web projects*/
+
 :root{
 	--base03: #AB0520;
 	--base02: #8B0015;
@@ -168,7 +170,7 @@ textarea{
 
 
 html,body{
-    font-family:"Proxima Nova";
+    font-family:"proxima-nova";
     font-size:15px;
     line-height:1.5;
 }
@@ -177,7 +179,8 @@ html{
 }
 h1{
     font-size:36px;
-    font-family:"Proxima Nova Extra Condensed";
+    font-family:"proxima-nova";
+    font-weight: 900;
     margin: 10px 0px;
 }
 h2{
@@ -196,10 +199,10 @@ h6{
     font-size:16px
 }
 .w3-serif{
-    font-family:"Garamond Premier Pro"
+    font-family:"garamond-premier-pro"
 }
 .w3-sans-serif{
-    font-family:"Proxima Nova"
+    font-family:"proxima-nova"
 }
 .w3-cursive{
     font-family:cursive
@@ -210,7 +213,7 @@ h6{
 
 
 h2,h3,h4,h5,h6{
-    font-family:"Proxima Nova";
+    font-family:"proxima-nova";
     font-weight: 400;
     margin:10px 0px;
 }
