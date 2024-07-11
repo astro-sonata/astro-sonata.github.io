@@ -4,20 +4,18 @@
 <title>SONATA</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
-.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
 .fa-anchor,.fa-coffee {font-size:200px}
 header {
   background: url("./imgs/m101_sn2023ixf.jpg") no-repeat top center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-position: center -200px;
+  background-position: center 20%;
   background-size: cover;
   color: white;
 }
@@ -27,9 +25,9 @@ header {
 
 <!-- Navbar -->
 <div class="w3-top">
-  <div class="w3-bar w3-white w3-card w3-left-align w3-large">
+  <div class="w3-bar w3-red w3-card w3-left-align w3-large">
     <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-grey w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="./index.html" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
+    <a href="./index.html" class="w3-bar-item w3-button w3-padding-large">Home</a>
     <a href="./members.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large">Members</a>
     <a href="./science.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large">Science</a>
     <a href="./telescopes.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large">Telescopes & Instrumentation</a>
@@ -37,11 +35,11 @@ header {
   </div>
 
   <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+  <div id="navDemo" class="w3-bar-block w3-red w3-hide w3-hide-large w3-hide-medium w3-large">
     <a href="./members.html" class="w3-bar-item w3-button w3-padding-large">Members</a>
     <a href="./science.html" class="w3-bar-item w3-button w3-padding-large">Science</a>
-    <a href="./telescopes.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large">Telescopes & Instrumentation</a>
-    <a href="./joinus.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large">Join Us!</a>
+    <a href="./telescopes.html" class="w3-bar-item w3-button w3-padding-large">Telescopes & Instrumentation</a>
+    <a href="./joinus.html" class="w3-bar-item w3-button w3-padding-large">Join Us!</a>
   </div>
 </div>
 
@@ -55,19 +53,15 @@ header {
   <div class="w3-content">
     <div class="w3-twothird">
       <h1>Graduate Students</h1>
-      <h5 class="w3-padding-32">
-	<p>
-	  We would love to grow our graduate student population in the SONATA group! For
-	  more information on applying see:
-	  <a href="https://www.as.arizona.edu/graduate-admissions">https://www.as.arizona.edu/graduate-admissions</a>.
-	  This page has detailed instructions on applying!
-	</p>
-	<p>
-	  If you have any questions, we encourage you to email any of the current graduate
-	  students or faculty, listed on <a href="./members.html">the members page</a>!
-      </h5>
+      <body class="w3-padding-32">
+        <p>
+          We would love to grow our graduate student population in the SONATA group! For more information on applying see: <a href="https://www.as.arizona.edu/graduate-admissions">https://www.as.arizona.edu/graduate-admissions</a>. This page has detailed instructions on applying!
+        </p>
+        <p>
+          If you have any questions, we encourage you to email any of the current graduate students or faculty, listed on <a href="./members.html">the members page</a>!
+        </p>
+      </body>
     </div>
-
     <div class="w3-third w3-center">
       <img src='image-path' alt=''>
     </div>
@@ -76,18 +70,16 @@ header {
 </div>
 
 <!-- Second Project here -->
-<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+<div class="w3-row-padding w3-grey w3-padding-64 w3-container">
   <div class="w3-content">
     <div class="w3-twothird">
       <h1>Postdocs</h1>
-
-      <h5 class="w3-padding-32">
-	Postdoc positions coming soon...
-      </h5>
+      <body class="w3-padding-32">
+	      Postdoc positions coming soon...
       <!-- <p class="w3-text-grey">
-	More info goes here...
+	      More info goes here...
       </p> -->
-      
+      </body>   
     </div>
     <div class="w3-third w3-center">
       <img src='image-path' alt=''>
@@ -96,8 +88,8 @@ header {
   </div>
 </div>
 
-<div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
-    <h1 class="w3-margin w3-xlarge"><a href=https://github.com/noahfranz13/sonata/discussions>Ask Questions in a GitHub Discussion!</h1>
+<div class="w3-container w3-blue w3-center w3-padding-64">
+  <h1 class="w3-margin w3-xlarge"><a href="https://github.com/noahfranz13/sonata/discussions" target="_blank">Ask Questions in our GitHub Discussion</h1>
 </div>
 
 <script>
