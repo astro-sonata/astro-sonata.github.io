@@ -42,7 +42,7 @@
 
 /* W3.CSS 4.15 December 2020 by Jan Egil and Borge Refsnes */
 html{
-    box-sizing:border-box
+    box-sizing:border-box;
 }
 *,*:before,*:after{
     box-sizing:inherit}
@@ -176,7 +176,9 @@ html{
     overflow-x:hidden
 }
 h1{
-    font-size:36px
+    font-size:36px;
+    font-family:"Proxima Nova Extra Condensed";
+    margin: 10px 0px;
 }
 h2{
     font-size:30px
@@ -206,14 +208,10 @@ h6{
     font-family:monospace
 }
 
-h1{
-    font-family:"Proxima Nova Extra Condensed";
-    margin: 10px 0px;
-}
 
 h2,h3,h4,h5,h6{
     font-family:"Proxima Nova";
-    font-weight: 500;
+    font-weight: 400;
     margin:10px 0px;
 }
 .w3-wide{
@@ -491,8 +489,10 @@ a{
 .w3-yellow,.w3-hover-yellow:hover{color:#000!important;background-color:#ffeb3b!important}
 .w3-white,.w3-hover-white:hover{color:var(--black)!important;background-color:var(--white)!important}
 .w3-black,.w3-hover-black:hover{color:#fff!important;background-color:#000!important}
-.w3-grey,.w3-hover-grey:hover,.w3-gray,.w3-hover-gray:hover{color:#000!important;background-color:var(--arizona-blue)!important}
-.w3-light-grey,.w3-hover-light-grey:hover,.w3-light-gray,.w3-hover-light-gray:hover{color:#000!important;background-color:#f1f1f1!important}
+
+.w3-grey,.w3-hover-grey:hover,.w3-gray,.w3-hover-gray:hover{color:#000!important;background-color:var(--warmgrey)!important}
+
+.w3-light-grey,.w3-hover-light-grey:hover,.w3-light-gray,.w3-hover-light-gray:hover{color:#000!important;background-color:var(--coolgrey)!important}
 .w3-dark-grey,.w3-hover-dark-grey:hover,.w3-dark-gray,.w3-hover-dark-gray:hover{color:#fff!important;background-color:#616161!important}
 .w3-pale-red,.w3-hover-pale-red:hover{color:#000!important;background-color:#ffdddd!important}
 .w3-pale-green,.w3-hover-pale-green:hover{color:#000!important;background-color:#ddffdd!important}
