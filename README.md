@@ -1,7 +1,7 @@
 # sonata
 Website for Steward Observatory Novel Astrophysical Transient Alliance (SONATA)
 
-The website is hosted at https://noahfranz13.github.io/sonata/.
+The website is hosted at https://astro-sonata.github.io/.
 
 ## Developer Instructions
 To view the website open a terminal and run:
